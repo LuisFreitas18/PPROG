@@ -12,7 +12,7 @@ public class User {
     private final double DEFAULT_HEIGHT = 0;
     private final double DEFAULT_WEIGHT = 0;
 
-    private final String[] OBESITY_MESSAGE = {"Thin", "Healthy", "Obesity"};
+    private static final String[] OBESITY_MESSAGE = {"Thin", "Healthy", "Obesity"};
     private static int BMI_LIMIT1 = 18;     //not final, can be changed (has setter)
     private static int BMI_LIMIT2 = 25;     //static, because is the same for every user, not unique to a user
 
@@ -26,7 +26,7 @@ public class User {
      *  public User() { //redirect the constructor to the one below using given parameters
      *      this (DEFAULT_NAME, DEFAULT_GENDER, DEFAULT_AGE, DEFAULT_HEIGHT, DEFAULT_WEIGHT);
      *  }
-    */ 
+    */
 
     public User() {
         name = DEFAULT_NAME;
@@ -45,6 +45,7 @@ public class User {
     }
 
     /**
+     * Representa um utilizador através do nome, género, idade, altura e peso
      *
      * @param name
      * @param gender
@@ -136,6 +137,8 @@ public class User {
     //normal class method, not related to instance (static) ^
 
     public double getBMI() {
+        if (height == 0)
+            return 0;
         return weight/(height * height);
     }
     public String getObesityDegree() {
@@ -149,8 +152,15 @@ public class User {
         }
     }
 
+    public static int getNumberOfUsers() {
+        return numberOfUsers;
+    }
+
     public boolean isHealthy() {
         return getObesityDegree().equals(OBESITY_MESSAGE[1]);
+    }
+    public static String getHealthy() {
+        return OBESITY_MESSAGE[1];
     }
 
     public User theYoungest(User otherUser) {
