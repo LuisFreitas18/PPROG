@@ -1,4 +1,4 @@
-//package data;
+package PL2;//package data;
 
 /**
  * Representa uma data através do dia, mês e ano.
@@ -60,7 +60,7 @@ public class Data {
             "Outubro", "Novembro", "Dezembro"};
 
     /**
-     * Constrói uma instância de Data recebendo o ano, o mês e o dia.
+     * Constrói uma instância de PL2.Data recebendo o ano, o mês e o dia.
      *
      * @param ano o ano da data
      * @param mes o mês da data
@@ -73,7 +73,7 @@ public class Data {
     }
 
     /**
-     * Constrói uma instância de Data com a data por omissão.
+     * Constrói uma instância de PL2.Data com a data por omissão.
      */
     public Data() {
         ano = ANO_POR_OMISSAO;

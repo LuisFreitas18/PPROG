@@ -1,3 +1,5 @@
+package PL2;
+
 public class MainUser {
     public static void main(String[] args) {
         User[] arr = new User[5];

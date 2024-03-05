@@ -1,0 +1,12 @@
+@startuml
+
+class Worker
+class CommissionWorker
+class HourlyWorker
+class PieceWorker
+
+Worker <|- CommissionWorker
+Worker <|- HourlyWorker
+Worker <|- PieceWorker
+
+@enduml

@@ -1,3 +1,5 @@
+package PL2;
+
 public class User {
     //attributes (private)
     private String name;
@@ -23,7 +25,7 @@ public class User {
     //constructors
 
     /**
-     *  public User() { //redirect the constructor to the one below using given parameters
+     *  public PL2.User() { //redirect the constructor to the one below using given parameters
      *      this (DEFAULT_NAME, DEFAULT_GENDER, DEFAULT_AGE, DEFAULT_HEIGHT, DEFAULT_WEIGHT);
      *  }
     */
@@ -117,7 +119,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "PL2.User{" +
                 "name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
