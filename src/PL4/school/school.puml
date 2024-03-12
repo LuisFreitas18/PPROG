@@ -1,0 +1,29 @@
+@startuml
+
+class Person {
+    -String name
+    -int id
+}
+
+interface iSalary {
+    getSalary();
+}
+
+class Professor extends Person implements iSalary{
+    -String category
+    -{static} String ASSISTANT = "Assistant"
+    -{static} String ADJUNCT = "Adjunct"
+    -{static} String COORDINATE = "Coordinate"
+    -{static} double BASE_SALARY = 1500
+    -{static} double percentageAdjunct = 0.2
+    -{static} double percentageCoordinator = 0.5
+}
+class Student extends Person{
+    -int mecNumber
+}
+class FellowshipStudent extends Student implements iSalary{
+    -double schoolarship
+}
+
+
+@enduml
